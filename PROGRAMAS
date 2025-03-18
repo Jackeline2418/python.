@@ -1,0 +1,82 @@
+# Función que busca un valor en una matriz 2D
+def buscar_valor(matriz, valor):
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            if matriz[i][j] == valor:
+                return (i, j)
+    return None  # Retorna None si no encuentra el valor
+
+# Matriz 3x3
+matriz = [
+    [9, 2, 7],
+    [3, 5, 1],
+    [8, 4, 6]
+]
+
+# Valor que se quiere buscar
+valor_a_buscar = 5
+
+# Buscar el valor en la matriz
+resultado = buscar_valor(matriz, valor_a_buscar)
+
+# Mostrar el resultado
+if resultado:
+    print(f"El valor {valor_a_buscar} se encuentra en la posición: {resultado}")
+else:
+    print(f"El valor {valor_a_buscar} no se encuentra en la matriz.")
+# Función para ordenar una fila usando Bubble Sort
+def ordenar_fila(matriz, fila):
+    for i in range(len(matriz[fila]) - 1):
+        for j in range(len(matriz[fila]) - 1 - i):
+            if matriz[fila][j] > matriz[fila][j + 1]:
+                matriz[fila][j], matriz[fila][j + 1] = matriz[fila][j + 1], matriz[fila][j]
+    return matriz
+
+# Matriz 3x3
+matriz = [
+    [9, 2, 7],
+    [3, 5, 1],
+    [8, 4, 6]
+]
+
+# Mostrar la matriz original
+print("Matriz original:")
+for fila in matriz:
+    print(fila)
+
+# Ordenar la fila 2 (índice 1) de la matriz
+fila_a_ordenar = 1
+matriz_ordenada = ordenar_fila(matriz, fila_a_ordenar)
+
+# Mostrar la matriz después de ordenar la fila
+print("\nMatriz después de ordenar la fila:")
+for fila in matriz_ordenada:
+    print(fila)
+# Función para ordenar una fila usando Bubble Sort
+def ordenar_fila(matriz, fila):
+    for i in range(len(matriz[fila]) - 1):
+        for j in range(len(matriz[fila]) - 1 - i):
+            if matriz[fila][j] > matriz[fila][j + 1]:
+                matriz[fila][j], matriz[fila][j + 1] = matriz[fila][j + 1], matriz[fila][j]
+    return matriz
+
+# Matriz 3x3
+matriz = [
+    [9, 2, 7],
+    [3, 5, 1],
+    [8, 4, 6]
+]
+
+# Mostrar la matriz original
+print("Matriz original:")
+for fila in matriz:
+    print(fila)
+
+# Ordenar la fila 2 (índice 1) de la matriz
+fila_a_ordenar = 1
+matriz_ordenada = ordenar_fila(matriz, fila_a_ordenar)
+
+# Mostrar la matriz después de ordenar la fila
+print("\nMatriz después de ordenar la fila:")
+for fila in matriz_ordenada:
+    print(fila)
